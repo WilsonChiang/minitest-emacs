@@ -83,6 +83,7 @@ The current directory is assumed to be the project's root otherwise."
 (defun minitest--run-command (command &optional file-name)
   (if (fboundp 'rvm-activate-corresponding-ruby)
       (rvm-activate-corresponding-ruby))
+  (chruby "2.2.3p172-shopify")
 
   (let ((default-directory (minitest-project-root))
         (compilation-scroll-output t)
