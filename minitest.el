@@ -24,7 +24,7 @@
   :type 'boolean
   :group 'minitest)
 
-(defcustom minitest-use-bundler t
+(defcustom minitest-use-bundler f
   "minitest mode should use bundler?"
   :type 'boolean
   :group 'minitest)
@@ -39,7 +39,7 @@
   :type 'string
   :group 'minitest)
 
-(defcustom minitest-default-command '("ruby" "-Ilib:test:spec")
+(defcustom minitest-default-command '("dev" "test")
   "Default command for minitest"
   :type 'list
   :group 'minitest)
@@ -53,7 +53,7 @@
         (t minitest-default-command)))
 
 (defun minitest-bundler-command ()
-  (cond (minitest-use-bundler '("dev" ""))
+  (cond (minitest-use-bundler '("dev"))
         (t nil)))
 
 (defun minitest-project-root ()
