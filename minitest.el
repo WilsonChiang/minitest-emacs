@@ -53,7 +53,7 @@
         (t minitest-default-command)))
 
 (defun minitest-bundler-command ()
-  (cond (minitest-use-bundler '("bundle" "exec"))
+  (cond (minitest-use-bundler '("bundle" ""))
         (t nil)))
 
 (defun minitest-project-root ()
@@ -64,7 +64,7 @@ The current directory is assumed to be the project's root otherwise."
         (-remove #'null)
         (car))
       (error "You're not into a project")))
-
+      
 (defun minitest-zeus-p ()
   (and minitest-use-zeus-when-possible
        (file-exists-p (concat (minitest-project-root) ".zeus.sock"))))
