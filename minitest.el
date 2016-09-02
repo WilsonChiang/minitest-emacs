@@ -24,7 +24,7 @@
   :type 'boolean
   :group 'minitest)
 
-(defcustom minitest-use-bundler f
+(defcustom minitest-use-bundler nil
   "minitest mode should use bundler?"
   :type 'boolean
   :group 'minitest)
