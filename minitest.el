@@ -53,7 +53,7 @@
         (t minitest-default-command)))
 
 (defun minitest-bundler-command ()
-  (cond (minitest-use-bundler '("bundle" ""))
+  (cond (minitest-use-bundler '("dev" ""))
         (t nil)))
 
 (defun minitest-project-root ()
